@@ -9,6 +9,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
+import CustomDialog from "./CustomDialog";
 
 const Equipment = () => (
   <section
@@ -20,11 +21,7 @@ const Equipment = () => (
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
         Nos différents{" "}
-        <span className="text-gradient font-nilland">Équipements</span> chez
-        <span className="text-gradient font-nilland">
-          {" "}
-          Croix Rousse Précision
-        </span>
+        <span className="text-gradient font-nilland">Équipements</span>
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
         Explorez notre gamme variée d'équipements de pointe, conçus pour
@@ -36,31 +33,83 @@ const Equipment = () => (
       <Carousel className="rounded-lg text-white">
         <CarouselContent className="rounded-lg">
           <CarouselItem>
-            <img
-              src={Machine1}
-              alt="Precision Machinery"
-              className="w-full h-auto rounded-xl"
+            <CustomDialog
+              button={
+                <img
+                  src={Machine1}
+                  alt="Precision Machinery"
+                  className="w-full h-auto rounded-xl"
+                />
+              }
+              footer="Voici une des machines de précision que nous utilisons pour la fabrication de nos produits."
+              description={
+                <img
+                  src={Machine1}
+                  alt="Precision Machinery"
+                  className="w-[900px] h-auto rounded-xl"
+                />
+              }
+              className="w-[900px] h-[800px] bg-primary text-white border-slate-500"
             />
           </CarouselItem>
           <CarouselItem>
-            <img
-              src={Machine2}
-              alt="Advanced Instrumentation"
-              className="w-full h-auto rounded-xl"
+            <CustomDialog
+              button={
+                <img
+                  src={Machine2}
+                  alt="Precision Machinery"
+                  className="w-full h-auto rounded-xl"
+                />
+              }
+              footer="Voici une des machines de précision que nous utilisons pour la fabrication de nos produits."
+              description={
+                <img
+                  src={Machine2}
+                  alt="Advanced Instrumentation"
+                  className="w-[900px] h-auto rounded-xl"
+                />
+              }
+              className="w-[900px] h-[800px] bg-primary text-white border-slate-500"
             />
           </CarouselItem>
           <CarouselItem>
-            <img
-              src={Machine3}
-              alt="High-Tech Gear"
-              className="w-full h-auto rounded-xl"
+            <CustomDialog
+              button={
+                <img
+                  src={Machine3}
+                  alt="Precision Machinery"
+                  className="w-full h-auto rounded-xl"
+                />
+              }
+              footer="Voici une des machines de précision que nous utilisons pour la fabrication de nos produits."
+              description={
+                <img
+                  src={Machine3}
+                  alt="High-Tech Gear"
+                  className="w-[900px] h-auto rounded-xl"
+                />
+              }
+              className="w-[900px] h-[800px] bg-primary text-white border-slate-500"
             />
           </CarouselItem>
           <CarouselItem>
-            <img
-              src={Machine4}
-              alt="Detailed Engineering Tools"
-              className="w-full h-auto rounded-xl"
+            <CustomDialog
+              button={
+                <img
+                  src={Machine4}
+                  alt="Precision Machinery"
+                  className="w-full h-auto rounded-xl"
+                />
+              }
+              footer="Voici une des machines de précision que nous utilisons pour la fabrication de nos produits."
+              description={
+                <img
+                  src={Machine4}
+                  alt="High-Tech Gear"
+                  className="w-[900px] h-auto rounded-xl"
+                />
+              }
+              className="w-[900px] h-[800px] bg-primary text-white border-slate-500"
             />
           </CarouselItem>
         </CarouselContent>

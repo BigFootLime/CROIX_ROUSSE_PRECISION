@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import Equipe from "./Equipe";
 import Nouvautes from "./Nouvautes";
 import Equipements from "./Equipement";
+import CustomDialog from "./CustomDialog";
 
 export {
   Navbar,
@@ -26,4 +27,5 @@ export {
   Equipe,
   Nouvautes,
   Equipements,
+  CustomDialog,
 };
