@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/nilland");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollxs::-webkit-scrollbar {
+  background-color: #c4c4c4;
+  width: 4px;
+  height: 4px;
+}
+
+.scrollsm::-webkit-scrollbar {
+  background-color: #c4c4c4;
+  width: 8px;
+  height: 8px;
+  overflow-y: scroll;
+}
+
+.scrollxs::-webkit-scrollbar-thumb,
+.scrollsm::-webkit-scrollbar-thumb {
+  background-color: #5c5c5c;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar {
+  background-color: #c4c4c4;
+  width: 8px;
+  height: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(40, 40, 40); /* color of the tracking area */
+  cursor: pointer;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #080915;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+:root {
+  font-family: "Nilland", sans-serif;
+  font-family: "Nilland-SmallCaps", sans-serif;
+  font-family: "Nilland-ExtraBold", sans-serif;
+  font-family: "Nilland-Black", sans-serif;
+
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+.font-nilland {
+  font-family: "Nilland-Black", sans-serif;
+}
+.text-gradient {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #fadee1 0.89%,
+    #f5bec5 17.23%,
+    #f09da5 42.04%,
+    #eb7d8a 55.12%,
+    #e65c73 71.54%,
+    #ae2830 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-30%); /* Start from left beyond the viewport */
+    opacity: 0; /* Optional: start with no opacity */
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1; /* Optional: end with full opacity */
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 1s ease-out forwards; /* Adjust timing and easing as needed */
+}
+
+/* Strengthened reset styles for the Equipe component */
+.equipeBackground {
+  position: fixed;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+.bg-blue-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #fadee1 -43.27%,
+    #f5bec5 -21.24%,
+    #f09da4 12.19%,
+    #eb7d8a 29.82%,
+    #e65c6a 51.94%,
+    #ae2830 90.29%
+  );
+}
+
+.bg-black-gradient {
+  background: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-black-gradient-2 {
+  background: linear-gradient(
+    -168.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-gray-gradient {
+  background: linear-gradient(
+    153.47deg,
+    rgba(255, 255, 255, 0) -341.94%,
+    #14101d 95.11%
+  );
+}
+
+.bg-discount-gradient {
+  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+}
+
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes levitate {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(
+      -15px
+    ); /* Adjust the pixel value for more or less movement */
+  }
+}
+
+.levitating-image {
+  animation: levitate 3s ease-in-out infinite; /* Runs the animation continuously */
+}
+
+@keyframes letter-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInTopToBottom {
+  from {
+    opacity: 0;
+    transform: translateY(
+      -40px
+    ); /* Adjust this value to control the starting position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-animation {
+  animation: fadeInTopToBottom 2s ease-out forwards; /* Adjust the duration and timing function as desired */
+}
+
+.feature-card:hover {
+  background: var(--black-gradient);
+  box-shadow: var(--card-shadow);
+}
+
+.feedback-container .feedback-card:last-child {
+  margin-right: 0px;
+}
+
+.feedback-card {
+  background: transparent;
+}
+
+.feedback-card:hover {
+  background: var(--black-gradient);
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #76212f 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4e5 0%, #fc67c0 100%);
+  filter: blur(900px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  animation-duration: 4s; /* Adjust duration as needed */
+}
