@@ -1,3 +1,6 @@
+import { PlusIcon } from "lucide-react";
+import { PlusCircleIcon } from "lucide-react";
+import { Plus } from "lucide-react";
 import React from "react";
 
 const CustomButton = ({ styles, text: propsText }) => (
@@ -5,7 +8,14 @@ const CustomButton = ({ styles, text: propsText }) => (
     type="button"
     className={`py-4 px-6 bg-blue-gradient font-poppins font-medium text-[18px] text-primary outline-none ${styles} rounded-[10px] hover:scale-105 transition-transform duration-300 ease-in-out`}
   >
-    {propsText || "Get Started"}
+    {propsText ? (
+      propsText
+    ) : (
+      <div className="flex flex-row ">
+        En savoir
+        <PlusCircleIcon className="ml-2" />
+      </div>
+    )}
   </button>
 );
 

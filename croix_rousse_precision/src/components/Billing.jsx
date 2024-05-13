@@ -1,5 +1,7 @@
-import { apple, bill, google, piece2 } from "../assets";
+import CustomDialog from "./CustomDialog";
+import { PHelico } from "../assets";
 import styles, { layout } from "../style";
+import CustomButton from "./CustomButton";
 
 const Billing = () => (
   <section
@@ -11,12 +13,12 @@ const Billing = () => (
   >
     <div className={layout.sectionImgReverse}>
       <img
-        src={piece2}
+        src={PHelico}
         alt="billing"
         className="w-[90%] relative z-[5] levitating-image"
       />
-      <div className="absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient " />
-      <div className="absolute z-[0] -left-1/2 bottom-0 w-[50%] h-[50%] rounded-full pink__gradient " />
+      <div className="sm:absolute z-[3] sm:-left-1/2 sm:top-0 sm:w-[50%] sm:h-[50%] sm:rounded-full sm:white__gradient hidden " />
+      <div className="sm:absolute z-[0] sm:-left-1/2 sm:bottom-0 sm:w-[50%] sm:h-[50%] sm:rounded-full sm:pink__gradient hidden " />
     </div>
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
@@ -30,18 +32,13 @@ const Billing = () => (
         réception des matériaux au stockage des pièces.
       </p>
 
-      <div className="flex flex-row flex-wrap sm:mt-10 mt-6">
-        <img
-          src={apple}
-          alt="apple_store"
-          className="w-[128px] h-[42px] object-contain mr-5 cursor-pointer"
-        />
-        <img
-          src={google}
-          alt="google_play"
-          className="w-[128px] h-[42px] object-contain cursor-pointer"
-        />
-      </div>
+      <CustomDialog
+        button={<CustomButton styles="mt-10" />}
+        title="Inscrit dans une démarche qualité"
+        description="En cohérence avec nos clients et partenaires, oeuvrant pour des domaines tant spécifiques qu’exigeants, les compagnons et l’entreprise s’inscrivent tout naturellement dans la démarche des certifications ISO 9100 et ISO 9001. De la réception des matériaux, en passant par le contrôle qualité de chaque pièce produite, au stockage clairement identifié de celle-ci pour nos clients — c’est l’intégralité de la chaîne d’interventions qui est tracée via la GPAO, offrant une sécurité maximum aux prestations proposées et un service d’une qualité garantie."
+        footer="."
+        className="md:w-[60%] md:h-[30%] sm:h-[50%] sm:w-[70%] bg-primary text-white border-none h-full w-full"
+      />
     </div>
   </section>
 );

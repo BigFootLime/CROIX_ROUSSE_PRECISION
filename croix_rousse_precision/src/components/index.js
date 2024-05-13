@@ -12,6 +12,8 @@ import Equipe from "./Equipe";
 import Nouvautes from "./Nouvautes";
 import Equipements from "./Equipement";
 import CustomDialog from "./CustomDialog";
+import CustomDrawer from "./CustomDrawer";
+import Parts from "./Parts";
 
 export {
   Navbar,
@@ -28,4 +30,6 @@ export {
   Nouvautes,
   Equipements,
   CustomDialog,
+  CustomDrawer,
+  Parts,
 };

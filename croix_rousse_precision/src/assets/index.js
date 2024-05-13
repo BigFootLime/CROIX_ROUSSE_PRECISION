@@ -43,6 +43,17 @@ import Machine1 from "./IMG_6984.jpg";
 import Machine2 from "./IMG_6977.jpg";
 import Machine3 from "./IMG_7133.jpg";
 import Machine4 from "./IMG_7141.jpg";
+import Noel2018 from "./Img_Noel2018.jpg";
+import PHelico from "./piece-Helico.png";
+import Carousel1 from "./PieceCarousel1.png";
+import Carousel2 from "./PieceCarousel2.png";
+import Carousel3 from "./PieceCarousel3.png";
+import Carousel4 from "./PieceCarousel4.png";
+import Carousel5 from "./PieceCarousel5.png";
+import Carousel6 from "./PieceCarousel6.png";
+import Carousel7 from "./PieceCarousel7.png";
+import Carousel8 from "./PieceCarousel8.png";
+import ImgCarabine from "./ImgECarabine.png";
 
 export {
   airbnb,
@@ -90,4 +101,15 @@ export {
   Machine2,
   Machine3,
   Machine4,
+  Noel2018,
+  PHelico,
+  Carousel1,
+  Carousel2,
+  Carousel3,
+  Carousel4,
+  Carousel5,
+  Carousel6,
+  Carousel7,
+  Carousel8,
+  ImgCarabine,
 };

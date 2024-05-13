@@ -6,13 +6,13 @@
 @tailwind utilities;
 
 .scrollxs::-webkit-scrollbar {
-  background-color: #c4c4c4;
+  background-color: #080915;
   width: 4px;
   height: 4px;
 }
 
 .scrollsm::-webkit-scrollbar {
-  background-color: #c4c4c4;
+  background-color: #080915;
   width: 8px;
   height: 8px;
   overflow-y: scroll;
@@ -20,7 +20,7 @@
 
 .scrollxs::-webkit-scrollbar-thumb,
 .scrollsm::-webkit-scrollbar-thumb {
-  background-color: #5c5c5c;
+  background-color: #c51616;
   border-radius: 10px;
 }
 

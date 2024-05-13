@@ -7,16 +7,17 @@ import {
   Billing,
   CardDeals,
   Testomonials,
-  Clients,
   Nouvautes,
   Footer,
   Equipe,
   Equipements,
+  Parts,
 } from "./components";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import the AOS CSS
 import ShowRoomEqipe from "./components/ShowRoomEquipe";
+import Partenariat from "./components/Partenariat";
 
 const App = () => {
   useEffect(() => {
@@ -26,7 +27,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className=" w-full overflow-hidden">
+    <div className=" w-full overflow-hidden select-none">
       <div className={` bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar />
@@ -57,8 +58,10 @@ const App = () => {
 
       <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
+          <Parts />
           <Equipements />
-          <Clients />
+          {/* <Clients /> */}
+          <Partenariat />
           <Nouvautes />
           <Footer />
         </div>

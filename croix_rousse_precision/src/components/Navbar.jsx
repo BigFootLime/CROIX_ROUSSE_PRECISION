@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="w-full flex py-6 justify-beetween items-center navbar navbar-animation">
       <img src={logoclair} alt="logo" className="w-[200px] h-auto" />
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+      <ul className="list-none md::flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={index}
@@ -16,12 +16,12 @@ const Navbar = () => {
               index === navLinks.length - 1 ? "mr-0" : "mr-10"
             } text-white`}
           >
-            <a href={`# ${nav.id}`}>{nav.title}</a>
+            <a href={`#${nav.id}`}>{nav.title}</a>
           </li>
         ))}
       </ul>
 
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <div className="md:hidden flex flex-1 justify-end items-center">
         <img
           src={toggle ? close : menu}
           alt="menu"
@@ -41,7 +41,7 @@ const Navbar = () => {
                   index === navLinks.length - 1 ? "mr-0" : "mb-4"
                 } text-white`}
               >
-                <a href={`# ${nav.id}`}>{nav.title}</a>
+                <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
           </ul>

@@ -4,13 +4,13 @@ import FeedbackCard from "./FeedbackCard";
 
 const Testimonials = () => (
   <section
-    id="clients"
+    id="equipe"
     data-aos="fade-right"
     data-aos-offset="200"
     data-aos-duration="1000"
     className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}
   >
-    <div className="absolute z-[0] w-[60%] h-[60%] -right-[50%] rounded-full blue__gradient bottom-40" />
+    <div className="hidden sm:absolute sm:z-[0] sm:w-[60%] sm:h-[60%] sm:-right-[50%] sm:rounded-full sm:blue__gradient sm:bottom-40" />
 
     <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1]">
       <h2 className={styles.heading2}>

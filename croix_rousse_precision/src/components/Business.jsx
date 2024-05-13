@@ -27,7 +27,7 @@ const FeatureCard = ({ icon, title, content, index }) => (
 
 const Business = () => (
   <section
-    id="features"
+    id="metiers"
     data-aos="fade-left"
     data-aos-offset="200"
     data-aos-duration="1000"
@@ -47,8 +47,6 @@ const Business = () => (
         avec des machines numériques et des logiciels régulièrement mis à jour,
         et réalise aussi le polissage industriel en interne.
       </p>
-
-      <CustomButton styles="mt-10" />
     </div>
     <div className={`${layout.sectionImg} flex-col`}>
       {features.map((feature, index) => (
