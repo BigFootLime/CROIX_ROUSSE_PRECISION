@@ -12,12 +12,14 @@ import {
   Equipe,
   Equipements,
   Parts,
+  Error404,
 } from "./components";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import the AOS CSS
 import ShowRoomEqipe from "./components/ShowRoomEquipe";
 import Partenariat from "./components/Partenariat";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
   useEffect(() => {

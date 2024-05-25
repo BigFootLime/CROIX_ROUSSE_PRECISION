@@ -54,6 +54,12 @@ import Carousel6 from "./PieceCarousel6.png";
 import Carousel7 from "./PieceCarousel7.png";
 import Carousel8 from "./PieceCarousel8.png";
 import ImgCarabine from "./ImgECarabine.png";
+import RestCo from "./restCo.png";
+import TAKUMI from "./img_TAKUMI.jpg";
+import Diviseur from "./img_Diviseur.jpg";
+import Mezz from "./img_Mezz.jpg";
+import NOMURADS from "./img_NOMURADS.jpg";
+import CRPLogo from "./CRPLOGO.png";
 
 export {
   airbnb,
@@ -112,4 +118,10 @@ export {
   Carousel7,
   Carousel8,
   ImgCarabine,
+  RestCo,
+  TAKUMI,
+  Diviseur,
+  Mezz,
+  NOMURADS,
+  CRPLogo,
 };

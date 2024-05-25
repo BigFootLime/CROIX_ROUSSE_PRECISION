@@ -7,7 +7,7 @@ const GetStarted = () => (
   <CustomDialog
     button={
       <div
-        className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer`}
+        className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer hover:scale-110 transition ease-in-out duration-300`}
       >
         <div
           className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%] rounded-full`}
@@ -29,12 +29,12 @@ const GetStarted = () => (
       </div>
     }
     titleClassName={`font-poppins overflow-x-auto scrollsm sm:text-[32px] text-[28px] sm:h-40`}
-    title="Spécialiste dans la fabrication de pièces complexes, ainsi que l’usinage de petites et moyennes séries."
+    title="Spécialiste dans la fabrication de pièces complexes, usinage de petites et moyennes séries."
     className="md:w-[40%] md:h-[50%] sm:h-[50%] sm:w-[85%] bg-black-gradient text-white border-none h-full w-full"
     descriptionClassName={
       "font-poppins sm:text-[16px] text-[15px] leading-[24px] mt-5 text-slate-400"
     }
-    description={`La maîtrise technique de l’usinage permet d‘œuvrer notamment pour les domaines aéronautique et spatial, secteurs dans lesquels se situent les principales références. Disposant du matériel conventionnel nécessaire à la réalisation de pièces simples, l’entreprise s’est dotée de plusieurs machines numériques, assistées de logiciels de programmation et conception, régulièrement up-gradés afin de permettre l’usinage de pièces les plus ouvragées. Le polissage industriel, allant de l’empreinte de moules polyglas au polissage industriel est également assuré en interne.`}
+    description={`La maîtrise technique de l’usinage permet d‘œuvrer notamment pour les domaines aéronautique et spatial, secteurs dans lesquels se situent les principales références. Disposant du matériel conventionnel nécessaire à la réalisation de pièces simples, l’entreprise s’est dotée de plusieurs machines numériques, assistées de logiciels de programmation et conception, régulièrement up-gradés afin de permettre l’usinage de pièces les plus ouvragées. Le polissage industriel et le microbillage réalisés en interne, apportent une prestation de finition pour les pièces d'aspect.`}
   />
 );
 

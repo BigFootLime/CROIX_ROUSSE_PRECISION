@@ -14,6 +14,7 @@ import Equipements from "./Equipement";
 import CustomDialog from "./CustomDialog";
 import CustomDrawer from "./CustomDrawer";
 import Parts from "./Parts";
+import Error404 from "./Error";
 
 export {
   Navbar,
@@ -32,4 +33,5 @@ export {
   CustomDialog,
   CustomDrawer,
   Parts,
+  Error404,
 };

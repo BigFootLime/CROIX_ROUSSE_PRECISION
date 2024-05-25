@@ -6,7 +6,7 @@ const Equipe = () => (
     data-aos="fade"
     data-aos-offset="200"
     data-aos-duration="3000"
-    className="w-screen equipeBackground" // Apply the new class here
+    className="w-0 sm:w-screen equipeBackground" // Apply the new class here
   >
     <img src={EquipePhoto} />
   </section>

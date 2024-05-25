@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { close, logoclair, menu } from "../assets";
-import { navLinks } from "../constants";
+import { navLinks, navLinksMobile } from "../constants";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -8,11 +8,11 @@ const Navbar = () => {
   return (
     <nav className="w-full flex py-6 justify-beetween items-center navbar navbar-animation">
       <img src={logoclair} alt="logo" className="w-[200px] h-auto" />
-      <ul className="list-none md::flex hidden justify-end items-center flex-1">
+      <ul className="list-none md:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={index}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${
+            className={`font-poppins font-normal cursor-pointer text-[16px] transition ease-in-out duration-300 hover:scale-110 hover:text-red-400  ${
               index === navLinks.length - 1 ? "mr-0" : "mr-10"
             } text-white`}
           >
@@ -34,7 +34,7 @@ const Navbar = () => {
           } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar `}
         >
           <ul className="list-none flex flex-col justify-end items-center flex-1">
-            {navLinks.map((nav, index) => (
+            {navLinksMobile.map((nav, index) => (
               <li
                 key={index}
                 className={`font-poppins font-normal cursor-pointer text-[16px] ${

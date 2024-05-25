@@ -13,47 +13,42 @@ const Stats = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const animateValue = (stat, startValue, endValue, duration) => {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const currentValue = Math.floor(
+          progress * (endValue - startValue) + startValue
+        );
+        setAnimatedStats((prevStats) =>
+          prevStats.map((prevStat) =>
+            prevStat.id === stat.id
+              ? { ...prevStat, value: `${currentValue}+` }
+              : prevStat
+          )
+        );
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        }
+      };
+      requestAnimationFrame(step);
+    };
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasAnimated) {
             setHasAnimated(true);
-            // Animate stats here
-            const intervals = defaultStats.map((stat) => {
+            defaultStats.forEach((stat) => {
               const maxVal = parseInt(stat.value.replace("+", ""), 10);
-              const step = maxVal / 100; // Adjust the step and duration to control the speed of the animation
-
-              const intervalId = setInterval(() => {
-                setAnimatedStats((prevStats) =>
-                  prevStats.map((prevStat) => {
-                    if (prevStat.id === stat.id) {
-                      const currentValue = parseInt(
-                        prevStat.value.replace("+", ""),
-                        10
-                      );
-                      const nextValue =
-                        currentValue + step > maxVal
-                          ? maxVal
-                          : currentValue + step;
-                      const formattedValue = `${nextValue}+`;
-                      return { ...prevStat, value: formattedValue };
-                    }
-                    return prevStat;
-                  })
-                );
-              }, 20);
-
-              return intervalId;
+              animateValue(stat, 0, maxVal, 2000); // 2000ms for 2 seconds
             });
-
-            return () => {
-              intervals.forEach(clearInterval);
-            };
           }
         });
       },
       {
-        threshold: 0.5, // Adjust threshold to control when the animation should start
+        threshold: 0.5,
       }
     );
 
@@ -66,7 +61,7 @@ const Stats = () => {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, [hasAnimated]); // Depend on hasAnimated to ensure effect only runs if animation hasn't started yet
+  }, [hasAnimated]);
 
   return (
     <section
@@ -76,7 +71,7 @@ const Stats = () => {
       {animatedStats.map((stat) => (
         <div
           key={stat.id}
-          className={`flex-1 flex justify-start items-center flex-row m-3 `}
+          className={`flex-1 flex justify-center items-center flex-row m-3 transition ease-in-out duration-300 hover:scale-110`}
         >
           <h4 className="font-poppins font-semibold xs:text-[40px] text-[30px] xs:leading-[53px] leading-[43px] text-white">
             {stat.value}

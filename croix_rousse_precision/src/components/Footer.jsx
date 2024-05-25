@@ -1,6 +1,27 @@
+import React from "react";
 import styles from "../style";
 import { logoclair } from "../assets";
 import { footerLinks, socialMedia } from "../constants";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+
+// Fix for the default marker icon issue in Leaflet with Webpack
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+
+import { Link } from "@react-email/components";
+import { PhoneCallIcon } from "lucide-react";
+delete L.Icon.Default.prototype._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: markerIcon2x,
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
+
+const center = [45.86579, 4.9134]; // Replace with your latitude and longitude
 
 const Footer = () => (
   <section
@@ -15,8 +36,32 @@ const Footer = () => (
           className="w-[266px] h-[72.14px] object-contain"
         />
         <p className={`${styles.paragraph} mt-4 max-w-[312px]`}>
-          A new way to make the payments easy, reliable and secure.
+          Une nouvelle approche pour garantir la fiabilité et la sécurite en
+          mécanique et usinage de précision.
         </p>
+      </div>
+
+      <div className=" mr-4 flex-[2] w-full h-[300px] md:h-[300px] z-0">
+        <MapContainer
+          center={center}
+          zoom={15}
+          style={{
+            width: "100%",
+            height: "100%",
+            borderRadius: "15px",
+            overflow: "hidden",
+          }}
+        >
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          />
+          <Marker position={center}>
+            <Popup>
+              Croix Rousse Précision, 530 Rue de la Dombes, 01700 Miribel
+            </Popup>
+          </Marker>
+        </MapContainer>
       </div>
 
       <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">
@@ -31,6 +76,7 @@ const Footer = () => (
             <ul className="list-none mt-4">
               {footerlink.links.map((link, index) => (
                 <li
+                  onClick={() => window.open(link.link)}
                   key={link.name}
                   className={`font-poppins font-normal text-[16px] leading-[24px] text-dimWhite hover:text-secondary cursor-pointer ${
                     index !== footerlink.links.length - 1 ? "mb-4" : "mb-0"
@@ -42,6 +88,28 @@ const Footer = () => (
             </ul>
           </div>
         ))}
+      </div>
+      <div className="flex flex-col">
+        <div>
+          <Link
+            className="text-[14px] font-poppins text-white"
+            href={`mailto:contact@croix-rousse-precision.fr`}
+          >
+            contact@croix-rousse-precision.fr
+          </Link>
+        </div>
+        <div className="flex items-center">
+          <PhoneCallIcon className="mr-2 h-4 w-4 opacity-70 text-white" />
+          <h4 className="text-white">
+            <a href="tel:+33478390772">+33 04 78 39 07 72</a>
+          </h4>
+        </div>
+        <div className="flex items-center">
+          <PhoneCallIcon className="mr-2 h-4 w-4 opacity-70 text-white" />
+          <h4 className="text-white">
+            <a href="tel:+330472002625">+33 04 72 00 26 25</a>
+          </h4>
+        </div>
       </div>
     </div>
 

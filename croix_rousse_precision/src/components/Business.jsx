@@ -5,7 +5,7 @@ import CustomButton from "./CustomButton";
 
 const FeatureCard = ({ icon, title, content, index }) => (
   <div
-    className={`flex flex-row p-6 rounded-[20px] ${
+    className={`flex flex-row p-6 rounded-[20px] transition-all hover:scale-105 ${
       index !== features.length - 1 ? "mb-6" : "mb-0"
     } feature-card`}
   >
@@ -43,9 +43,10 @@ const Business = () => (
         .
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        L'entreprise spécialisée en usinage sert l'aéronautique et le spatial
-        avec des machines numériques et des logiciels régulièrement mis à jour,
-        et réalise aussi le polissage industriel en interne.
+        Notre entreprise spécialisée en usinage sert principalement
+        l'aéronautique et le spatial, avec des machines numériques et des
+        logiciels régulièrement mis à jour, et réalise aussi le polissage
+        industriel et le microbillage en interne.
       </p>
     </div>
     <div className={`${layout.sectionImg} flex-col`}>

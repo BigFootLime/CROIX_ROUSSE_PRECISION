@@ -24,20 +24,21 @@ const MainSection = () => (
       </div> */}
       <div className="flex flex-row justify-between items-center w-full">
         <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px] animated-text">
-          Expertise <br className="sm:block hidden" />{" "}
-          <span className="text-gradient font-nilland">Spécialiste</span> {""}
+          Usinage de
+          <br className="sm:block hidden" />{" "}
+          <span className="text-gradient font-nilland">Précision</span> {""}
         </h1>
         <div className="ss:flex hidden md:mr-4 mr-0">
           <GetStarted />
         </div>
       </div>{" "}
       <h1 className="flex-1 font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full animated-text">
-        en mécanique précise.
+        Pièces Mécaniques
       </h1>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Notre équipe d&apos;experts en mécanique précise prend soin
-        méticuleusement de chaque pièce développée, garantissant un qualité
-        supérieure et performance exceptionnelle pour chaque projet.
+        Notre équipe d&apos;experts en mécanique de précision prend soin
+        méticuleusement de chaque pièce développée, garantissant qualité
+        supérieure et performance exceptionnelle pour chaque projet confié.
       </p>
     </div>
     <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>

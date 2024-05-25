@@ -1,6 +1,7 @@
 import styles from "../style";
 import CustomButton from "./CustomButton";
 import { ImgNouveautes } from "../assets";
+import { Diviseur } from "../assets";
 import {
   Drawer,
   DrawerContent,
@@ -21,8 +22,7 @@ const Nouvautes = () => (
       <div className="hidden sm:absolute sm:z-[0] sm:w-[60%] sm:h-[60%] sm:-left-[55%] sm:rounded-full sm:blue__gradient" />
       <h2 className={styles.heading2}>Dernière Nouveauté</h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        Arrivée en Mai de notre deuxième Diviseur NIKKEN, 4ème axe piloté.
       </p>
       <div className={`sm:ml-10 ml-0 sm:my-12 my-6`}>
         <Drawer>
@@ -71,7 +71,7 @@ const Nouvautes = () => (
     <div className="mt-6 sm:mt-0 sm:ml-8">
       <img
         className="w-full max-w-[300px] sm:max-w-[800px] rounded-xl"
-        src={ImgNouveautes}
+        src={Diviseur}
         alt="Nouveautes"
       ></img>
     </div>

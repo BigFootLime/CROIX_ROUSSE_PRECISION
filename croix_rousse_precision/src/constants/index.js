@@ -15,6 +15,11 @@ import {
   Machine3,
   Noel2018,
   Machine1,
+  RestCo,
+  Mezz,
+  TAKUMI,
+  Diviseur,
+  NOMURADS,
 } from "../assets";
 
 export const navLinks = [
@@ -48,28 +53,48 @@ export const navLinks = [
     title: "Contacts",
   },
 ];
+export const navLinksMobile = [
+  {
+    id: "home",
+    title: "Menu",
+  },
+
+  {
+    id: "equipe",
+    title: "Equipe",
+  },
+  {
+    id: "actu",
+    title: "Actualités",
+  },
+  {
+    id: "contact",
+    title: "Contacts",
+  },
+];
 
 export const features = [
+  {
+    id: "feature-2",
+    icon: innovation,
+    title: "Ingénierie",
+    content:
+      "Co-conception, avec nos clients, afin d'optimiser l'usinabilité des pièces + Conception de projets en interne.",
+  },
   {
     id: "feature-1",
     icon: perceuse,
     title: "Usinage",
     content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+      "Centres d'usinage vertical 3 axes avec diviseurs 4ème axe integré, positionné (optionels) + Tours Numérques.",
   },
-  {
-    id: "feature-2",
-    icon: innovation,
-    title: "Innovation",
-    content:
-      "We take proactive steps make sure your information and transactions are secure.",
-  },
+
   {
     id: "feature-3",
     icon: outil,
     title: "Finition",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "Finitions polissage + microbillage pour pièces d'aspect visibles aux clients.",
   },
 ];
 
@@ -120,53 +145,6 @@ export const stats = [
 ];
 
 export const footerLinks = [
-  {
-    title: "Liens Utiles",
-    links: [
-      {
-        name: "Content",
-        link: "https://www.hoobank.com/content/",
-      },
-      {
-        name: "How it Works",
-        link: "https://www.hoobank.com/how-it-works/",
-      },
-      {
-        name: "Create",
-        link: "https://www.hoobank.com/create/",
-      },
-      {
-        name: "Explore",
-        link: "https://www.hoobank.com/explore/",
-      },
-      {
-        name: "Terms & Services",
-        link: "https://www.hoobank.com/terms-and-services/",
-      },
-    ],
-  },
-  {
-    title: "Communauté",
-    links: [
-      {
-        name: "Help Center",
-        link: "https://www.hoobank.com/help-center/",
-      },
-
-      {
-        name: "Suggestions",
-        link: "https://www.hoobank.com/suggestions/",
-      },
-      {
-        name: "Blog",
-        link: "https://www.hoobank.com/blog/",
-      },
-      {
-        name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
-      },
-    ],
-  },
   {
     title: "Partenaires",
     links: [
@@ -222,82 +200,37 @@ export const clients = [
 
 export const newsEvents = [
   {
-    id: "carousel-item-2",
-    img: Noel2018,
-    name: "Jane Doe",
-    title: "Toute l'équipe vous souhaite de joyeuses fêtes de fin d'année",
-    date: "2023-12-25",
+    id: "carousel-item-1",
+    img: Mezz,
+    name: "John Doe",
+    title: "Installation de notre nouvelle Mezzanine (180m²) ",
+    date: "2023-06-01",
   },
   {
     id: "carousel-item-1",
-    img: Machine3,
+    img: TAKUMI,
+    name: "John Doe",
+    title: "Arrivé de notre nouvelle machine TAKUMI VC-1052 ",
+    date: "2023-07-01",
+  },
+  {
+    id: "carousel-item-1",
+    img: NOMURADS,
     name: "John Doe",
     title: "Arrivé de notre nouvelle machine NOMURA DST 40L",
-    date: "2024-01-01",
+    date: "2023-11-01",
   },
-
   {
-    id: "carousel-item-3",
-    img: Machine1,
-    name: "John Jane",
-    title: "CFO",
-    content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+    id: "carousel-item-1",
+    img: Diviseur,
+    name: "John Doe",
+    title: "Diviseur NIKKEN CNC-105(4ème axe)",
+    date: "2024-04-01",
   },
   {
     id: "carousel-item-3",
-    img: Machine1,
-    name: "John Jane",
-    title: "CFO",
-    content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
-  },
-  {
-    id: "carousel-item-3",
-    img: Machine1,
-    name: "John Jane",
-    title: "CFO",
-    content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
-  },
-  {
-    id: "carousel-item-3",
-    img: Machine1,
-    name: "John Jane",
-    title: "CFO",
-    content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
-  },
-  {
-    id: "carousel-item-3",
-    img: Machine1,
-    name: "John Jane",
-    title: "CFO",
-    content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
-  },
-  {
-    id: "carousel-item-3",
-    img: Machine1,
-    name: "John Jane",
-    title: "CFO",
-    content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
-  },
-  {
-    id: "carousel-item-3",
-    img: Machine1,
-    name: "John Jane",
-    title: "CFO",
-    content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
-  },
-  {
-    id: "carousel-item-3",
-    img: Machine1,
-    name: "John Jane",
-    title: "CFO",
-    content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+    img: RestCo,
+    title:
+      "Des nouveautés passionnantes arriveront bientôt sur notre site, restez connectés !",
   },
 ];

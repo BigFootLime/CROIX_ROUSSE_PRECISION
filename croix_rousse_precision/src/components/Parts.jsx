@@ -31,6 +31,7 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 import CustomDialog from "./CustomDialog";
+import { PlusCircleIcon } from "lucide-react";
 
 const Parts = () => (
   <section
@@ -41,6 +42,8 @@ const Parts = () => (
     data-aos-duration="1000"
   >
     <div className={layout.sectionImgReverse}>
+      <div className="absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient " />
+      <div className="absolute z-[0] -left-1/2 bottom-0 w-[50%] h-[50%] rounded-full pink__gradient " />
       <Carousel className="rounded-lg text-white">
         <CarouselContent className="rounded-lg">
           <CarouselItem>
@@ -88,24 +91,7 @@ const Parts = () => (
               />
             </div>
           </CarouselItem>
-          <CarouselItem>
-            <div className="block ">
-              <img
-                src={Carousel6}
-                alt="Precision Machinery"
-                className="w-full h-auto rounded-xl"
-              />
-            </div>
-          </CarouselItem>
-          <CarouselItem>
-            <div className="block ">
-              <img
-                src={Carousel7}
-                alt="Precision Machinery"
-                className="w-full h-auto rounded-xl"
-              />
-            </div>
-          </CarouselItem>
+
           <CarouselItem>
             <div className="block ">
               <img
@@ -120,24 +106,16 @@ const Parts = () => (
         <CarouselNext />
       </Carousel>
     </div>
-    <div className={`${layout.sectionInfo} ml-20`}>
+    <div className={`${layout.sectionInfo} sm:ml-20`}>
       <h2 className={styles.heading2}>
-        Nos différents{" "}
-        <span className="text-gradient font-nilland">Pièces Usinées</span>
+        Nos réalisations{" "}
+        <span className="text-gradient font-nilland">
+          Mécaniques Industrielles
+        </span>
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Explorez notre gamme variée d'équipements de pointe, conçus pour
-        répondre aux exigences les plus strictes de précision et d'efficacité.
+        Exemples de nos differentes usinages.
       </p>
-      <Drawer>
-        <DrawerTrigger>{<CustomButton styles="mt-10" />}</DrawerTrigger>
-        <DrawerContent className="bg-primary text-white font-poppins">
-          <DrawerHeader>
-            <DrawerTitle>Tous nos equipements sont ici.</DrawerTitle>
-            <DrawerDescription>{}</DrawerDescription>
-          </DrawerHeader>
-        </DrawerContent>
-      </Drawer>
     </div>
   </section>
 );

@@ -14,10 +14,8 @@ const Partenariat = () => (
   >
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
-        Nous sommes en partenariat avec{" "}
-        <span className="text-gradient font-nilland">Esprit</span>
-        <br className="sm:block hidden" />
-        <span className="text-gradient font-nilland">Carabine</span>
+        Notre partenaire <br className="sm:block hidden" />
+        <span className="text-gradient font-nilland"> Esprit Carabine</span>
       </h2>
 
       <CustomButton text="Venez découvrir prochainement..." styles="mt-10" />
