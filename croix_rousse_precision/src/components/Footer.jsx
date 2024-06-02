@@ -101,13 +101,13 @@ const Footer = () => (
         <div className="flex items-center">
           <PhoneCallIcon className="mr-2 h-4 w-4 opacity-70 text-white" />
           <h4 className="text-white">
-            <a href="tel:+33478390772">+33 04 78 39 07 72</a>
+            <a href="tel:+33478390772">04 78 39 07 72</a>
           </h4>
         </div>
         <div className="flex items-center">
           <PhoneCallIcon className="mr-2 h-4 w-4 opacity-70 text-white" />
           <h4 className="text-white">
-            <a href="tel:+330472002625">+33 04 72 00 26 25</a>
+            <a href="tel:+33472002625">04 72 00 26 25</a>
           </h4>
         </div>
       </div>

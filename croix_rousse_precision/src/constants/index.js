@@ -121,6 +121,7 @@ export const feedback = [
     surname: "THOMASSONI",
     email: "nizier@croix-rousse-precision.fr",
     telNo: "+33 6 82 83 25 67",
+    tel: "+33682832567",
     title: "Directeur Production & Planification",
     img: Nizier,
   },
