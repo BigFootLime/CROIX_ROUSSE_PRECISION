@@ -95,11 +95,11 @@ body::-webkit-scrollbar-thumb {
 
 /* Strengthened reset styles for the Equipe component */
 .equipeBackground {
-  position: fixed;
+  /* position: fixed;
   top: -5px;
   left: 0;
   width: 100%;
-  z-index: -1;
+  z-index: -1; */
 }
 .bg-blue-gradient {
   background: linear-gradient(

@@ -2,11 +2,7 @@ import { EquipePhoto } from "../assets";
 
 const Equipe = () => (
   <section
-    id="features"
-    data-aos="fade"
-    data-aos-offset="200"
-    data-aos-duration="3000"
-    className="w-0 sm:w-screen equipeBackground" // Apply the new class here
+    className="w-screen sm:fixed sm:-top-5 sm:left-0 sm:w-full sm:z-[-1]" // Apply the new class here
   >
     <img src={EquipePhoto} />
   </section>
